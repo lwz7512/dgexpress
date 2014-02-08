@@ -4,5 +4,5 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'Data Visualizer' });
+  res.render('index', { title: 'Welcome to Data Visualizer demo page' });
 };

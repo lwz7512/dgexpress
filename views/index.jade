@@ -1,12 +1,57 @@
 extends layout
 
+block scripts
+    script(src='javascripts/jquery.min.js')
+    script(type='text/javascript').
+        window.onload = function(){
+
+            console.log(">>> to add interactive actions!");
+
+            //------------- treemap demo --------------------------------
+            $('#loadTreemapJson').click(function(){
+
+                console.log("to loadTreemapJson...");
+
+            });
+            $('#TreemapForm').submit(function(){//validate the json
+                var json = $('#TreemapJsonData').val();
+                
+                return checkJsonValid(json);
+            });
+
+            //----------------------------------------------
+
+
+            function checkJsonValid(json){
+                if(json.length==0){
+                    alert("load json first!");
+                    return false;
+                }
+                
+                try{
+                    JSON.parse(json);
+                }catch(err){
+                    console.error("Parse json error: "+err);
+                    alert("json parse error!");
+                    return false;
+                }
+              
+                return true;
+            }
+
+
+        };//end of onload
+
 block content
   h1= title
-  p Welcome to #{title}
+  p(style="margin:30px") This is a demo page to illustrate the charts generation function...
 
-  form(name="generate", action="/create", method="post")
-    p
-      label(for="json") json-data:
-        textarea(id="json", name="json", rows="10" ,cols="100")
-
-    input(type="submit", value="ceate")
+  .group
+    h3 Treemap chart:
+    form(id="TreemapForm", action="/create", method="post")
+      p
+        label(for="json") json-data:
+          textarea(id="TreemapJsonData", name="json", rows="10" ,cols="100")
+    
+      input(id="loadTreemapJson", type="button", value="Load json first", style="margin-right: 10px;")
+      input(id="submitTreemapForm", type="submit", value="Ceate chart then", style="margin-right: 10px;")
