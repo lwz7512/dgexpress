@@ -13,8 +13,10 @@ var fs = require("fs");
 
 
 var app = express();
+
 var _server = "http://localhost";
 var _ph;//cached connection to phantomjs process
+var _charttypes = {};
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -38,12 +40,14 @@ app.get('/', routes.index);
 app.get('/users', user.list);
 
 app.post('/create', function(req, res, next){
-  
+  var charttype = req.body.charttype;
+  console.log(">>> processing: "+charttype);
+
   var content = req.body.json;
-  var template = _server+ ":"+ app.get('port')+"/templates/treemap.html";
+  var template = _server+ ":"+ app.get('port')+"/templates/"+charttype+".html";
   console.log(template);
   
-  renderByJson(content, template, res, 'treemap_json.png');
+  renderByJson(content, template, res, charttype+'_json.png');
 
 });
 

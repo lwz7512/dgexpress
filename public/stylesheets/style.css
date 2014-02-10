@@ -8,15 +8,19 @@ a {
   color: #00B7FF;
 }
 
-label textarea{
+label textarea{/* textarea in label */
  vertical-align: top;
  resize: none;
 }
 
 /* each chart demo container */
 .group {
-    /*border: 1px solid #F5F5F5;*/
+    /**border: 1px solid #F5F5F5;*/
     margin-left: 30px;
     margin-top: 20px;
     margin-bottom: 10px;
+}
+
+.small-space {
+    margin: 10px;
 }
