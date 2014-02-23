@@ -69,11 +69,12 @@ function renderByJson(content, template, res, filename) {
     var filepath = __dirname + '/public/images/' + filename;
 
     console.log(">>> 1.1: "+ new Date().getTime());
+
     _ph.createPage(function(err,page) {
         console.log(">>> 1.2: "+ new Date().getTime());
       page.open(template, function(err,status) {
         console.log(">>> 2: "+ new Date().getTime());
-        console.log(">>> local template opened!");
+        console.log(">>> local template opened: "+status);
         
         page.evaluate(function(json) {
             window.drawByJSON(json);//feed json data
@@ -99,7 +100,9 @@ function renderByJson(content, template, res, filename) {
 
       });//end of page.open
     });//end of createPage
+
 }
+
 
 function getFilesizeInKB(filename) {
     var stats = fs.statSync(filename)

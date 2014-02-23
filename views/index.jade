@@ -10,14 +10,17 @@ block content
 
   .group
     h3 Treemap chart:
-    form(id="TreemapForm", action="/create", method="post")
-      p
-        label(for="json") json-data:
-          textarea(id="TreemapJsonData", name="json", rows="10" ,cols="100")
-      
-      input(id="loadTreemapJson", type="button", value="Load json first", style="margin-right: 10px;")
-      input(id="submitTreemapForm", type="button", value="Ceate chart then", style="margin-right: 10px;")
-      img(id="treemap_loading", src="/stylesheets/loading.gif", width="22px;" height="22px", style="vertical-align:middle; display:none;")
+    div(style="float:left; border:1px solid #F5F5F5;")
+      img(src="/icons/treemap.png", width="120px", height="120px")
+    div(style="margin-left:130px;") 
+      form(id="TreemapForm", action="/create", method="post")
+        p
+          label(for="json") json-data:
+            textarea(id="TreemapJsonData", name="json", rows="10" ,cols="80")
+        
+        input(id="loadTreemapJson", type="button", value="Load json first", style="margin-right: 10px;")
+        input(id="submitTreemapForm", type="button", value="Ceate chart then", style="margin-right: 10px;")
+        img(id="treemap_loading", src="/stylesheets/loading.gif", width="22px;" height="22px", style="vertical-align:middle; display:none;")
 
     #treemap_result.small-space
           
