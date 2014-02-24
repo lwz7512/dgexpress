@@ -10,9 +10,9 @@ block content
 
   .group
     h3 Treemap chart:
-    div(style="float:left; border:1px solid #F5F5F5;")
+    .left-thubmnail
       img(src="/icons/treemap.png", width="120px", height="120px")
-    div(style="margin-left:130px;") 
+    .right-box
       form(id="TreemapForm", action="/create", method="post")
         p
           label(for="json") json-data:
@@ -23,4 +23,10 @@ block content
         img(id="treemap_loading", src="/stylesheets/loading.gif", width="22px;" height="22px", style="vertical-align:middle; display:none;")
 
     #treemap_result.small-space
+
+  .group
+    h3 Radial Reingold–Tilford Tree graph:
+    .left-thubmnail
+      img(src="/icons/node-link-tree.png", width="120px", height="100px")
+    .right-box
           

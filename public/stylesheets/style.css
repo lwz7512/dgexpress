@@ -24,3 +24,12 @@ label textarea{/* textarea in label */
 .small-space {
     margin: 10px;
 }
+
+.left-thubmnail {
+    float:left; 
+    border:1px solid #F5F5F5;
+}
+
+.right-box {
+    margin-left:130px;
+}
