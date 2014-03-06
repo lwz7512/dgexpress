@@ -13,20 +13,66 @@ block content
     .left-thubmnail
       img(src="/icons/treemap.png", width="120px", height="120px")
     .right-box
-      form(id="TreemapForm", action="/create", method="post")
+      form(id="Treemap_Form", action="/create", method="post")
         p
           label(for="json") json-data:
-            textarea(id="TreemapJsonData", name="json", rows="10" ,cols="80")
-        
-        input(id="loadTreemapJson", type="button", value="Load json first", style="margin-right: 10px;")
-        input(id="submitTreemapForm", type="button", value="Ceate chart then", style="margin-right: 10px;")
-        img(id="treemap_loading", src="/stylesheets/loading.gif", width="22px;" height="22px", style="vertical-align:middle; display:none;")
-
-    #treemap_result.small-space
+            textarea(id="Treemap_JsonData", name="json", rows="10" ,cols="80")
+        //load
+        input(id="load_Treemap_Json", type="button", value="Load json first", style="margin-right: 10px;")
+        //post
+        input(id="submit_Treemap_Form", type="button", value="Ceate chart then", style="margin-right: 10px;")
+        img(id="Treemap_loading", src="/stylesheets/loading.gif", width="22px;" height="22px", style="vertical-align:middle; display:none;")
+    //response
+    #Treemap_result.small-space
 
   .group
-    h3 Radial Reingold–Tilford Tree graph:
+    h3 RadialTree graph:
     .left-thubmnail
       img(src="/icons/node-link-tree.png", width="120px", height="100px")
     .right-box
+      form(id="RadialTree_Form", action="/create", method="post")
+        p
+          label(for="json") json-data:
+            textarea(id="RadialTree_JsonData", name="json", rows="10" ,cols="80")
+        //load
+        input(id="load_RadialTree_Json", type="button", value="Load json first", style="margin-right: 10px;")
+        //post
+        input(id="submit_RadialTree_Form", type="button", value="Ceate chart then", style="margin-right: 10px;")
+        img(id="RadialTree_loading", src="/stylesheets/loading.gif", width="22px;" height="22px", style="vertical-align:middle; display:none;")
+    //response
+    #RadialTree_result.small-space
+          
+  .group
+    h3 Pie graph:
+    .left-thubmnail
+      img(src="/icons/pie.png", width="120px", height="110px")
+    .right-box
+      form(id="Pie_Form", action="/create", method="post")
+        p
+          label(for="json") json-data:
+            textarea(id="Pie_JsonData", name="json", rows="10" ,cols="80")
+        //load
+        input(id="Pie_Json", type="button", value="Load json first", style="margin-right: 10px;")
+        //post
+        input(id="submit_Pie_Form", type="button", value="Ceate chart then", style="margin-right: 10px;")
+        img(id="Pie_loading", src="/stylesheets/loading.gif", width="22px;" height="22px", style="vertical-align:middle; display:none;")
+    //response
+    #Pie_result.small-space
+          
+  .group
+    h3 Guage graph:
+    .left-thubmnail
+      img(src="/icons/guage.png", width="120px", height="110px")
+    .right-box
+      form(id="Guage_Form", action="/create", method="post")
+        p
+          label(for="json") json-data:
+            textarea(id="Guage_JsonData", name="json", rows="10" ,cols="80")
+        //load
+        input(id="load_Guage_Json", type="button", value="Load json first", style="margin-right: 10px;")
+        //post
+        input(id="submit_Guage_Form", type="button", value="Ceate chart then", style="margin-right: 10px;")
+        img(id="Guage_loading", src="/stylesheets/loading.gif", width="22px;" height="22px", style="vertical-align:middle; display:none;")
+    //response
+    #Guage_result.small-space
           

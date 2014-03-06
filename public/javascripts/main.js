@@ -11,33 +11,32 @@
 
         console.log(">>> to add interactive actions!");
 
-            //------------- treemap demo --------------------------------
-            $('#loadTreemapJson').click(function(){
-
+            //------------- Treemap demo --------------------------------
+            $('#load_Treemap_Json').click(function(){//load json
                 console.log("to loadTreemapJson...");
                 $.get('/templates/flare.json', function(data){
                     //console.log(data);
-                    $('#TreemapJsonData').val(JSON.stringify(data,null,4));
-                    $('#treemap_loading').toggle();
+                    $('#Treemap_JsonData').val(JSON.stringify(data,null,4));
+                    $('#Treemap_loading').toggle();
                 });
-                $('#treemap_loading').toggle();
+                $('#Treemap_loading').toggle();
             });
-            $('#submitTreemapForm').click(function(){
-                var json = $('#TreemapJsonData').val();
+            $('#submit_Treemap_Form').click(function(){//form post
+                var json = $('#Treemap_JsonData').val();
                 var valid = checkJsonValid(json);
                 if(valid){
                     $.post('/create', {json: json, charttype: 'treemap'}, function(data){
                         //alert("Success!");
                         var result = JSON.parse(data);
-                        $('#treemap_result').empty().append(data);
-                        $('#treemap_result').append('&nbsp;&nbsp;>>>&nbsp;&nbsp;<a href="'+result.url+'" target="_blank">View it!</a>');
-                        $('#treemap_loading').toggle();
+                        $('#Treemap_result').empty().append(data);
+                        $('#Treemap_result').append('&nbsp;&nbsp;>>>&nbsp;&nbsp;<a href="'+result.url+'" target="_blank">View it!</a>');
+                        $('#Treemap_loading').toggle();
                     });
                 }
-                $('#treemap_loading').toggle();
+                $('#Treemap_loading').toggle();
             });
             
-            //----------------------------------------------
+            //--------------- RadialTree -------------------------------
 
 
             //------ common function ----------------------------
