@@ -6,21 +6,21 @@ block scripts
 
 block content
   h1= title
-  p(style="margin:30px") This is a demo page to illustrate the charts generation function...
+  p(style="margin:30px") This is a demo page to illustrate the charts generation functionality...
 
   .group
-    h3 Treemap chart:
+    h3 Treemap graph:
     .left-thubmnail
       img(src="/icons/treemap.png", width="120px", height="120px")
     .right-box
       form(id="Treemap_Form", action="/create", method="post")
         p
-          label(for="json") json-data:
+          label(for="json") json:
             textarea(id="Treemap_JsonData", name="json", rows="10" ,cols="80")
         //load
-        input(id="load_Treemap_Json", type="button", value="Load json first", style="margin-right: 10px;")
+        input(id="load_Treemap_Json", type="button", value="Load json first", style="margin-left:34px; margin-right: 10px;")
         //post
-        input(id="submit_Treemap_Form", type="button", value="Ceate chart then", style="margin-right: 10px;")
+        input(id="submit_Treemap_Form", type="button", value="Ceate graph then", style="margin-right: 10px;")
         img(id="Treemap_loading", src="/stylesheets/loading.gif", width="22px;" height="22px", style="vertical-align:middle; display:none;")
     //response
     #Treemap_result.small-space
@@ -32,12 +32,12 @@ block content
     .right-box
       form(id="RadialTree_Form", action="/create", method="post")
         p
-          label(for="json") json-data:
+          label(for="json") json:
             textarea(id="RadialTree_JsonData", name="json", rows="10" ,cols="80")
         //load
-        input(id="load_RadialTree_Json", type="button", value="Load json first", style="margin-right: 10px;")
+        input(id="load_RadialTree_Json", type="button", value="Load json first", style="margin-left:34px; margin-right: 10px;")
         //post
-        input(id="submit_RadialTree_Form", type="button", value="Ceate chart then", style="margin-right: 10px;")
+        input(id="submit_RadialTree_Form", type="button", value="Ceate graph then", style="margin-right: 10px;")
         img(id="RadialTree_loading", src="/stylesheets/loading.gif", width="22px;" height="22px", style="vertical-align:middle; display:none;")
     //response
     #RadialTree_result.small-space
@@ -49,12 +49,12 @@ block content
     .right-box
       form(id="Pie_Form", action="/create", method="post")
         p
-          label(for="json") json-data:
+          label(for="json") json:
             textarea(id="Pie_JsonData", name="json", rows="10" ,cols="80")
         //load
-        input(id="Pie_Json", type="button", value="Load json first", style="margin-right: 10px;")
+        input(id="Pie_Json", type="button", value="Load json first", style="margin-left:34px; margin-right: 10px;")
         //post
-        input(id="submit_Pie_Form", type="button", value="Ceate chart then", style="margin-right: 10px;")
+        input(id="submit_Pie_Form", type="button", value="Ceate graph then", style="margin-right: 10px;")
         img(id="Pie_loading", src="/stylesheets/loading.gif", width="22px;" height="22px", style="vertical-align:middle; display:none;")
     //response
     #Pie_result.small-space
@@ -66,13 +66,183 @@ block content
     .right-box
       form(id="Guage_Form", action="/create", method="post")
         p
-          label(for="json") json-data:
+          label(for="json") json:
             textarea(id="Guage_JsonData", name="json", rows="10" ,cols="80")
         //load
-        input(id="load_Guage_Json", type="button", value="Load json first", style="margin-right: 10px;")
+        input(id="load_Guage_Json", type="button", value="Load json first", style="margin-left:34px; margin-right: 10px;")
         //post
-        input(id="submit_Guage_Form", type="button", value="Ceate chart then", style="margin-right: 10px;")
+        input(id="submit_Guage_Form", type="button", value="Ceate graph then", style="margin-right: 10px;")
         img(id="Guage_loading", src="/stylesheets/loading.gif", width="22px;" height="22px", style="vertical-align:middle; display:none;")
     //response
     #Guage_result.small-space
+          
+  .group
+    h3 Area chart:
+    .left-thubmnail
+      img(src="/icons/area.png", width="120px", height="110px")
+    .right-box
+      form(id="Area_Form", action="/create", method="post")
+        p
+          label(for="json") json:
+            textarea(id="Area_JsonData", name="json", rows="10" ,cols="80")
+        //load
+        input(id="load_Area_Json", type="button", value="Load json first", style="margin-left:34px; margin-right: 10px;")
+        //post
+        input(id="submit_Area_Form", type="button", value="Ceate chart then", style="margin-right: 10px;")
+        img(id="Area_loading", src="/stylesheets/loading.gif", width="22px;" height="22px", style="vertical-align:middle; display:none;")
+    //response
+    #Area_result.small-space
+          
+  .group
+    h3 Line chart:
+    .left-thubmnail
+      img(src="/icons/line.png", width="120px", height="110px")
+    .right-box
+      form(id="Line_Form", action="/create", method="post")
+        p
+          label(for="json") json:
+            textarea(id="Line_JsonData", name="json", rows="10" ,cols="80")
+        //load
+        input(id="load_Line_Json", type="button", value="Load json first", style="margin-left:34px; margin-right: 10px;")
+        //post
+        input(id="submit_Line_Form", type="button", value="Ceate chart then", style="margin-right: 10px;")
+        img(id="Line_loading", src="/stylesheets/loading.gif", width="22px;" height="22px", style="vertical-align:middle; display:none;")
+    //response
+    #Line_result.small-space
+          
+  .group
+    h3 two-value area chart:
+    .left-thubmnail
+      img(src="/icons/two-value.png", width="120px", height="110px")
+    .right-box
+      form(id="two-value", action="/create", method="post")
+        p
+          label(for="json") json:
+            textarea(id="two-value_JsonData", name="json", rows="10" ,cols="80")
+        //load
+        input(id="load_two-value_Json", type="button", value="Load json first", style="margin-left:34px; margin-right: 10px;")
+        //post
+        input(id="submit_two-value_Form", type="button", value="Ceate chart then", style="margin-right: 10px;")
+        img(id="two-value_loading", src="/stylesheets/loading.gif", width="22px;" height="22px", style="vertical-align:middle; display:none;")
+    //response
+    #two-value_result.small-space
+          
+  .group
+    h3 Multi-Series Line chart:
+    .left-thubmnail
+      img(src="/icons/msline.png", width="120px", height="110px")
+    .right-box
+      form(id="msline", action="/create", method="post")
+        p
+          label(for="json") json:
+            textarea(id="msline_JsonData", name="json", rows="10" ,cols="80")
+        //load
+        input(id="load_msline_Json", type="button", value="Load json first", style="margin-left:34px; margin-right: 10px;")
+        //post
+        input(id="submit_msline_Form", type="button", value="Ceate chart then", style="margin-right: 10px;")
+        img(id="msline_loading", src="/stylesheets/loading.gif", width="22px;" height="22px", style="vertical-align:middle; display:none;")
+    //response
+    #msline_result.small-space
+          
+  .group
+    h3 Stacked-Area Line chart:
+    .left-thubmnail
+      img(src="/icons/starea.png", width="120px", height="110px")
+    .right-box
+      form(id="starea", action="/create", method="post")
+        p
+          label(for="json") json:
+            textarea(id="starea_JsonData", name="json", rows="10" ,cols="80")
+        //load
+        input(id="load_starea_Json", type="button", value="Load json first", style="margin-left:34px; margin-right: 10px;")
+        //post
+        input(id="submit_starea_Form", type="button", value="Ceate chart then", style="margin-right: 10px;")
+        img(id="starea_loading", src="/stylesheets/loading.gif", width="22px;" height="22px", style="vertical-align:middle; display:none;")
+    //response
+    #starea_result.small-space
+          
+  .group
+    h3 Bar chart:
+    .left-thubmnail
+      img(src="/icons/bar.png", width="120px", height="110px")
+    .right-box
+      form(id="bar", action="/create", method="post")
+        p
+          label(for="json") json:
+            textarea(id="bar_JsonData", name="json", rows="10" ,cols="80")
+        //load
+        input(id="load_bar_Json", type="button", value="Load json first", style="margin-left:34px; margin-right: 10px;")
+        //post
+        input(id="submit_bar_Form", type="button", value="Ceate chart then", style="margin-right: 10px;")
+        img(id="bar_loading", src="/stylesheets/loading.gif", width="22px;" height="22px", style="vertical-align:middle; display:none;")
+    //response
+    #bar_result.small-space
+          
+  .group
+    h3 Stacked Bar chart:
+    .left-thubmnail
+      img(src="/icons/stbar.png", width="120px", height="110px")
+    .right-box
+      form(id="stbar", action="/create", method="post")
+        p
+          label(for="json") json:
+            textarea(id="stbar_JsonData", name="json", rows="10" ,cols="80")
+        //load
+        input(id="load_stbar_Json", type="button", value="Load json first", style="margin-left:34px; margin-right: 10px;")
+        //post
+        input(id="submit_stbar_Form", type="button", value="Ceate chart then", style="margin-right: 10px;")
+        img(id="stbar_loading", src="/stylesheets/loading.gif", width="22px;" height="22px", style="vertical-align:middle; display:none;")
+    //response
+    #stbar_result.small-space
+          
+  .group
+    h3 Normalized Stacked Bar chart:
+    .left-thubmnail
+      img(src="/icons/nsbar.png", width="120px", height="110px")
+    .right-box
+      form(id="nsbar", action="/create", method="post")
+        p
+          label(for="json") json:
+            textarea(id="nsbar_JsonData", name="json", rows="10" ,cols="80")
+        //load
+        input(id="load_nsbar_Json", type="button", value="Load json first", style="margin-left:34px; margin-right: 10px;")
+        //post
+        input(id="submit_nsbar_Form", type="button", value="Ceate chart then", style="margin-right: 10px;")
+        img(id="nsbar_loading", src="/stylesheets/loading.gif", width="22px;" height="22px", style="vertical-align:middle; display:none;")
+    //response
+    #nsbar_result.small-space
+          
+  .group
+    h3 Grouped Bar chart:
+    .left-thubmnail
+      img(src="/icons/grbar.png", width="120px", height="110px")
+    .right-box
+      form(id="grbar", action="/create", method="post")
+        p
+          label(for="json") json:
+            textarea(id="grbar_JsonData", name="json", rows="10" ,cols="80")
+        //load
+        input(id="load_grbar_Json", type="button", value="Load json first", style="margin-left:34px; margin-right: 10px;")
+        //post
+        input(id="submit_grbar_Form", type="button", value="Ceate chart then", style="margin-right: 10px;")
+        img(id="grbar_loading", src="/stylesheets/loading.gif", width="22px;" height="22px", style="vertical-align:middle; display:none;")
+    //response
+    #grbar_result.small-space
+          
+  .group
+    h3 Scatterplot graph:
+    .left-thubmnail
+      img(src="/icons/scatter.png", width="120px", height="110px")
+    .right-box
+      form(id="scatter", action="/create", method="post")
+        p
+          label(for="json") json:
+            textarea(id="scatter_JsonData", name="json", rows="10" ,cols="80")
+        //load
+        input(id="load_scatter_Json", type="button", value="Load json first", style="margin-left:34px; margin-right: 10px;")
+        //post
+        input(id="submit_scatter_Form", type="button", value="Ceate chart then", style="margin-right: 10px;")
+        img(id="scatter_loading", src="/stylesheets/loading.gif", width="22px;" height="22px", style="vertical-align:middle; display:none;")
+    //response
+    #scatter_result.small-space
           
